@@ -16,5 +16,5 @@ pokemonIDs.map((id) => {
     let card = document.createElement('div');
     card.setAttribute('class', "pokemon-card");
     card.append(img);
-    document.body.append(card);
+    document.getElementById('grid').append(card);
 });
