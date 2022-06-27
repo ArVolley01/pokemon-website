@@ -13,7 +13,8 @@ pokemonIDs.map((id) => {
     console.log(imgUrl);
     let img = document.createElement('img');
     img.src = imgUrl;
-    img.setAttribute('height','100px')
-    img.setAttribute('width','100px')
-    document.body.append(img);
+    let card = document.createElement('div');
+    card.setAttribute('class', "pokemon-card");
+    card.append(img);
+    document.body.append(card);
 });
