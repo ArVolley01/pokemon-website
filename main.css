@@ -10,6 +10,7 @@ body {
 #grid {
     display: flex;
     justify-content: center;
+    gap: 1%;
 }
 
 .pokemon-card {
@@ -22,6 +23,7 @@ body {
 .pokemon-card:hover {
     transform: scale(1.05);
     border: 2px solid black;
+    cursor: pointer;
 }
 
 .pokemon-card > img {
