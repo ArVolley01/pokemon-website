@@ -14,21 +14,28 @@ const grid = document.getElementById('grid');
 const newBtn = document.getElementById('new-pokemon-btn');
 rosterDiv = document.querySelector('#roster');
 
+
+
 const getDeleteButton = (index, func) => {
+
     const confirmation = () => {
         userRoster[index] = true;
         document.querySelector(`#pokemon-${index + 1}`).innerHTML = "";
         document.querySelector(`#pokemon-${index + 1}`).removeEventListener('click', func);
-    }
-    button = document.createElement('button');
+    };
+
+    const button = document.createElement('button');
+
     button.addEventListener('click', () => {
         button.innerText = "confirm?"
+        
         button.addEventListener('click', confirmation);
         setTimeout(() => {
             button.removeEventListener('click', confirmation);
             button.innerText = "DELETE";
         }, 3000);
     });
+
     button.innerText = "DELETE";
     return button;
 };
